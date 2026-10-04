@@ -1,34 +1,41 @@
-# PhoneMail 📱📧
+# 📱 PhoneMail (Alphastack Buildathon Project)
 
-Welcome to **PhoneMail**, a full-stack application developed for the Alphastack Buildathon. PhoneMail bridges mobile client interactions with a robust backend service, fully containerized for seamless deployment.
-
----
-
-## 🏗️ Project Architecture & Structure
-
-The repository is organized into a modular full-stack layout:
-
-* **`mobile-client/`**: The mobile application interface connecting users to the service.
-* **`phonemail-backend/`**: The core backend server handling API requests, business logic, and communication routing.
-* **`docker-compose.yml`**: Orchestrates container deployment across services.
-* **`.env`**: Environment configuration file for managing secure credentials.
+PhoneMail is a next-generation communication platform that bridges traditional email and real-time messaging by using **phone numbers as email IDs** (e.g., `9876543210@phonemail.com`)[cite: 7]. Built with a mobile-first philosophy, it combines a WhatsApp-inspired chat interface with robust backend synchronization[cite: 7, 10].
 
 ---
 
-## 🚀 Getting Started & Running Locally
+## 🌟 Key Features
 
-To run the complete full-stack environment using Docker, ensure you have Docker installed on your machine, then run:
+* **Phone-Number-as-Email-ID**: Seamlessly map telephone numbers to secure email handles[cite: 7].
+* **WhatsApp-Inspired Mobile Client**: 
+  * Onboarding flow (Language selection, Terms & Conditions, Phone Verification, and OTP/Password authentication)[cite: 7, 10].
+  * Unified chat inbox organized by conversations rather than separate folders[cite: 8].
+  * Filter chips for quick sorting: **All, Unread, Favourites, and Attachments**[cite: 8].
+  * Interactive features including voice notes, document attachments, AI smart replies, and message forwarding/starring.
+* **Real-Time WebSocket Sync**: Instant multi-session messaging powered by Node.js and Socket.io.
+* **Live Notifications & Simulation**: Real-time alerts simulating official communications (Electricity Board bills, DigiLocker transcripts, Bank alerts, and Academic updates).
 
-```bash
-# Clone the repository
-git clone [https://github.com/abhishekrathore11936-dot/alphastack-phonemail.git](https://github.com/abhishekrathore11936-dot/alphastack-phonemail.git)
-cd alphastack-phonemail
-
-# Build and start all containers
-docker-compose up --build
+---
 
 ## 🛠️ Tech Stack
 
-* **Backend:** Node.js / Containerized API (`phonemail-backend`)
-* **Client:** Mobile client interface (`mobile-client`)
-* **DevOps & Deployment:** Docker & Docker Compose
+* **Frontend**: React, Vite, Socket.io-client[cite: 9, 10]
+* **Backend**: Node.js, Express, Socket.io[cite: 9, 10]
+* **Containerization**: Docker & Docker Compose
+
+---
+
+## 📂 Project Structure
+
+```text
+alphastack-phonemail/
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── Dockerfile
+├── mobile-client/
+│   ├── src/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── Dockerfile
+└── docker-compose.yml
